@@ -1,0 +1,28 @@
+{
+    "title": "mojo.postman.Request",
+    "description": "A request represents an HTTP request.\nIf a string, the string is assumed to be the request URL and the method is assumed to be 'GET'.",
+    "type": "object",
+    "properties": {
+        "body": {
+            "$ref": "#/components/schemas/mojo.postman.Request.Body"
+        },
+        "description": {
+            "$ref": "#/components/schemas/mojo.postman.Description"
+        },
+        "header": {
+            "title": "mojo.core.Array",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Header"
+            }
+        },
+        "method": {
+            "title": "mojo.core.String",
+            "description": "The Standard HTTP method associated with this request.\nOne of  \"GET\",\"PUT\",\"POST\",\"PATCH\",\"DELETE\",\"COPY\",\"HEAD\",\"OPTIONS\",\"LINK\",\"UNLINK\",\"PURGE\",\"LOCK\",\"UNLOCK\",\"PROPFIND\",\"VIEW\"\nOr the Custom HTTP method associated with this request.",
+            "type": "string"
+        },
+        "url": {
+            "$ref": "#/components/schemas/mojo.postman.Url"
+        }
+    }
+}

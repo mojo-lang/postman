@@ -1,0 +1,30 @@
+{
+    "title": "mojo.postman.Collection",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "info": {
+            "$ref": "#/components/schemas/mojo.postman.Info"
+        },
+        "item": {
+            "title": "mojo.core.Array",
+            "description": "Items are the basic unit for a Postman collection.\nYou can think of them as corresponding to a single API endpoint.\nEach Item has one request and may have multiple API responses associated with it.",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Item"
+            }
+        },
+        "variable": {
+            "title": "mojo.core.Array",
+            "description": "Collection variables allow you to define a set of variables, that are a *part of the collection*,\nas opposed to environments, which are separate entities.\n\n*Note: Collection variables must not contain any sensitive information.*",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Variable"
+            }
+        }
+    },
+    "required": [
+        "info",
+        "item"
+    ]
+}

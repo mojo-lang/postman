@@ -1,0 +1,48 @@
+{
+    "title": "mojo.postman.Response",
+    "description": "A response represents an HTTP response.",
+    "type": "object",
+    "properties": {
+        "body": {
+            "title": "mojo.core.String",
+            "description": "The raw text of the response.",
+            "type": "string"
+        },
+        "code": {
+            "title": "mojo.core.Int32",
+            "description": "The numerical response code, example: 200, 201, 404, etc.",
+            "type": "integer",
+            "format": "Int32"
+        },
+        "header": {
+            "title": "mojo.core.Array",
+            "description": "No HTTP request is complete without its headers, and the same is true for a Postman request.\nThis field is an array containing all the headers.",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Header"
+            }
+        },
+        "id": {
+            "title": "mojo.core.String",
+            "description": "A unique, user defined identifier that can  be used to refer to this response from requests.",
+            "type": "string"
+        },
+        "originalRequest": {
+            "$ref": "#/components/schemas/mojo.postman.Request"
+        },
+        "responseTime": {
+            "title": "mojo.core.Int32",
+            "description": "The time taken by the request to complete. If a number, the unit is milliseconds.\nIf the response is manually created, this can be set to `null`.",
+            "type": "integer",
+            "format": "Int32"
+        },
+        "status": {
+            "title": "mojo.core.String",
+            "description": "The response status, e.g: '200 OK'",
+            "type": "string"
+        },
+        "timings": {
+            "$ref": "#/components/schemas/mojo.core.Object"
+        }
+    }
+}

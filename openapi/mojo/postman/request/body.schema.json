@@ -1,0 +1,44 @@
+{
+    "title": "mojo.postman.Request.Body",
+    "description": "This field contains the data usually contained in the request body.",
+    "type": "object",
+    "properties": {
+        "disabled": {
+            "title": "mojo.core.Bool",
+            "description": "When set to true, prevents request body from being sent.",
+            "type": "boolean"
+        },
+        "file": {
+            "$ref": "#/components/schemas/mojo.postman.Request.File"
+        },
+        "formdata": {
+            "title": "mojo.core.Array",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Request.FormParameter"
+            }
+        },
+        "graphql": {
+            "$ref": "#/components/schemas/mojo.core.Object"
+        },
+        "mode": {
+            "title": "mojo.core.String",
+            "description": "Postman stores the type of data associated with this request in this field.\nShould be one of the \"raw\",\"urlencoded\",\"formdata\",\"file\",\"graphql\"",
+            "type": "string"
+        },
+        "options": {
+            "$ref": "#/components/schemas/mojo.core.Object"
+        },
+        "raw": {
+            "title": "mojo.core.String",
+            "type": "string"
+        },
+        "urlencoded": {
+            "title": "mojo.core.Array",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Request.UrlEncodedParameter"
+            }
+        }
+    }
+}

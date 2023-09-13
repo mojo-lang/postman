@@ -1,0 +1,23 @@
+{
+    "title": "mojo.postman.Url.QueryParam",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "description": {
+            "$ref": "#/components/schemas/mojo.postman.Description"
+        },
+        "disabled": {
+            "title": "mojo.core.Bool",
+            "description": "If set to true, the current query parameter will not be sent with the request.",
+            "type": "boolean"
+        },
+        "key": {
+            "title": "mojo.core.String",
+            "type": "string"
+        },
+        "value": {
+            "title": "mojo.core.String",
+            "type": "string"
+        }
+    }
+}

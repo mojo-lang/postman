@@ -1,0 +1,25 @@
+{
+    "title": "mojo.postman.Request.UrlEncodedParameter",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "description": {
+            "$ref": "#/components/schemas/mojo.postman.Description"
+        },
+        "disabled": {
+            "title": "mojo.core.Bool",
+            "type": "boolean"
+        },
+        "key": {
+            "title": "mojo.core.String",
+            "type": "string"
+        },
+        "value": {
+            "title": "mojo.core.String",
+            "type": "string"
+        }
+    },
+    "required": [
+        "key"
+    ]
+}

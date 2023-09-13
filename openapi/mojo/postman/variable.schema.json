@@ -1,0 +1,42 @@
+{
+    "title": "mojo.postman.Variable",
+    "description": "Using variables in your Postman requests eliminates the need to duplicate requests, which can save a lot of time.\nVariables can be defined, and referenced to from any part of a request.",
+    "type": "object",
+    "properties": {
+        "description": {
+            "$ref": "#/components/schemas/mojo.postman.Description"
+        },
+        "disabled": {
+            "title": "mojo.core.Bool",
+            "type": "boolean"
+        },
+        "id": {
+            "title": "mojo.core.String",
+            "description": "A variable ID is a unique user-defined value that identifies the variable within a collection.\nIn traditional terms, this would be a variable name.",
+            "type": "string"
+        },
+        "key": {
+            "title": "mojo.core.String",
+            "description": "A variable key is a human friendly value that identifies the variable within a collection.\nIn traditional terms, this would be a variable name.",
+            "type": "string"
+        },
+        "name": {
+            "title": "mojo.core.String",
+            "description": "Variable name",
+            "type": "string"
+        },
+        "system": {
+            "title": "mojo.core.Bool",
+            "description": "When set to true, indicates that this variable has been set by Postman",
+            "type": "boolean"
+        },
+        "type": {
+            "title": "mojo.core.String",
+            "description": "A variable may have multiple types. This field specifies the type of the variable.\nOne of \"string\",\"boolean\",\"any\",\"number\"",
+            "type": "string"
+        },
+        "value": {
+            "$ref": "#/components/schemas/mojo.core.Value"
+        }
+    }
+}

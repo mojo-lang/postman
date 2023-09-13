@@ -1,0 +1,15 @@
+{
+    "title": "mojo.postman.Url.PathSegment",
+    "description": "The complete path of the current url, broken down into segments. A segment could be a string, or a path variable.",
+    "type": "object",
+    "properties": {
+        "type": {
+            "title": "mojo.core.String",
+            "type": "string"
+        },
+        "value": {
+            "title": "mojo.core.String",
+            "type": "string"
+        }
+    }
+}

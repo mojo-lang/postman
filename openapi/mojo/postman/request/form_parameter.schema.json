@@ -1,0 +1,42 @@
+{
+    "title": "mojo.postman.Request.FormParameter",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "contentType": {
+            "title": "mojo.core.String",
+            "description": "Override Content-Type header of this form data entity.",
+            "type": "string"
+        },
+        "description": {
+            "$ref": "#/components/schemas/mojo.postman.Description"
+        },
+        "disabled": {
+            "title": "mojo.core.Bool",
+            "description": "When set to true, prevents this form data entity from being sent.",
+            "type": "boolean"
+        },
+        "key": {
+            "title": "mojo.core.String",
+            "type": "string"
+        },
+        "src": {
+            "title": "mojo.core.String",
+            "description": "enabled if type is \"file\"",
+            "type": "string"
+        },
+        "type": {
+            "title": "mojo.core.String",
+            "description": "should be \"text\", or \"file\"",
+            "type": "string"
+        },
+        "value": {
+            "title": "mojo.core.String",
+            "description": "enabled if type is \"text\"",
+            "type": "string"
+        }
+    },
+    "required": [
+        "key"
+    ]
+}

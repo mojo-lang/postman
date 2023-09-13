@@ -1,0 +1,59 @@
+{
+    "title": "mojo.postman.Url",
+    "description": "If object, contains the complete broken-down URL for this request. If string, contains the literal request URL.",
+    "type": "object",
+    "properties": {
+        "hash": {
+            "title": "mojo.core.String",
+            "description": "Contains the URL fragment (if any).\nUsually this is not transmitted over the network, but it could be useful to store this in some cases.",
+            "type": "string"
+        },
+        "host": {
+            "title": "mojo.core.Array",
+            "description": "The host for the URL, E.g: api.yourdomain.com. Can be stored as a string or as an array of strings.",
+            "type": "array",
+            "items": {
+                "title": "mojo.core.String",
+                "type": "string"
+            }
+        },
+        "path": {
+            "title": "mojo.core.Array",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Url.PathSegment"
+            }
+        },
+        "port": {
+            "title": "mojo.core.String",
+            "description": "The port number present in this URL. An empty value implies 80/443 depending on whether the protocol field contains http/https.",
+            "type": "string"
+        },
+        "protocol": {
+            "title": "mojo.core.String",
+            "description": "The protocol associated with the request, E.g: 'http'",
+            "type": "string"
+        },
+        "query": {
+            "title": "mojo.core.Array",
+            "description": "An array of QueryParams, which is basically the query string part of the URL, parsed into separate variables",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Url.QueryParam"
+            }
+        },
+        "raw": {
+            "title": "mojo.core.String",
+            "description": "The string representation of the request URL, including the protocol, host, path, hash, query parameter(s) and path variable(s).",
+            "type": "string"
+        },
+        "variable": {
+            "title": "mojo.core.Array",
+            "description": "Postman supports path variables with the syntax `/path/:variableName/to/somewhere`.\nThese variables are stored in this field.",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Variable"
+            }
+        }
+    }
+}

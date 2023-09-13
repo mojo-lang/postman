@@ -1,0 +1,49 @@
+{
+    "title": "mojo.postman.Item",
+    "description": "Items are entities which contain an actual HTTP request, and sample responses attached to it.",
+    "type": "object",
+    "properties": {
+        "description": {
+            "$ref": "#/components/schemas/mojo.postman.Description"
+        },
+        "id": {
+            "title": "mojo.core.String",
+            "description": "A unique ID that is used to identify collections internally\nonly leaf type",
+            "type": "string"
+        },
+        "item": {
+            "title": "mojo.core.Array",
+            "description": "Items are entities which contain an actual HTTP request, and sample responses attached to it.\nFolders may contain many items.",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Item"
+            }
+        },
+        "name": {
+            "title": "mojo.core.String",
+            "description": "A human readable identifier for the current item.",
+            "type": "string"
+        },
+        "request": {
+            "$ref": "#/components/schemas/mojo.postman.Request"
+        },
+        "response": {
+            "title": "mojo.core.Array",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Response"
+            }
+        },
+        "variable": {
+            "title": "mojo.core.Array",
+            "description": "Collection variables allow you to define a set of variables, that are a *part of the collection*,\nas opposed to environments, which are separate entities.\n\n*Note: Collection variables must not contain any sensitive information.*",
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/mojo.postman.Variable"
+            }
+        }
+    },
+    "required": [
+        "request"
+    ]
+}

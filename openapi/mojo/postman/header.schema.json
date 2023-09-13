@@ -1,0 +1,29 @@
+{
+    "title": "mojo.postman.Header",
+    "description": "Represents a single HTTP Header",
+    "type": "object",
+    "properties": {
+        "description": {
+            "$ref": "#/components/schemas/mojo.postman.Description"
+        },
+        "disabled": {
+            "title": "mojo.core.Bool",
+            "description": "If set to true, the current header will not be sent with requests.",
+            "type": "boolean"
+        },
+        "key": {
+            "title": "mojo.core.String",
+            "description": "This holds the LHS of the HTTP Header, e.g ``Content-Type`` or ``X-Custom-Header``",
+            "type": "string"
+        },
+        "value": {
+            "title": "mojo.core.String",
+            "description": "The value (or the RHS) of the Header is stored in this field.",
+            "type": "string"
+        }
+    },
+    "required": [
+        "key",
+        "value"
+    ]
+}
