@@ -44,7 +44,7 @@ func (x *Request) Reset() {
 	}
 }
 
-func (x *Request) ToText() string {
+func (x *Request) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
@@ -126,7 +126,7 @@ func (x *Request_Body) Reset() {
 	}
 }
 
-func (x *Request_Body) ToText() string {
+func (x *Request_Body) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
@@ -225,7 +225,7 @@ func (x *Request_UrlEncodedParameter) Reset() {
 	}
 }
 
-func (x *Request_UrlEncodedParameter) ToText() string {
+func (x *Request_UrlEncodedParameter) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
@@ -299,7 +299,7 @@ func (x *Request_FormParameter) Reset() {
 	}
 }
 
-func (x *Request_FormParameter) ToText() string {
+func (x *Request_FormParameter) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
@@ -389,7 +389,7 @@ func (x *Request_File) Reset() {
 	}
 }
 
-func (x *Request_File) ToText() string {
+func (x *Request_File) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 

@@ -46,7 +46,7 @@ func (x *Url) Reset() {
 	}
 }
 
-func (x *Url) ToText() string {
+func (x *Url) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
@@ -143,7 +143,7 @@ func (x *Url_PathSegment) Reset() {
 	}
 }
 
-func (x *Url_PathSegment) ToText() string {
+func (x *Url_PathSegment) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
@@ -200,7 +200,7 @@ func (x *Url_QueryParam) Reset() {
 	}
 }
 
-func (x *Url_QueryParam) ToText() string {
+func (x *Url_QueryParam) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 

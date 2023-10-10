@@ -41,7 +41,7 @@ func (x *Collection) Reset() {
 	}
 }
 
-func (x *Collection) ToText() string {
+func (x *Collection) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
